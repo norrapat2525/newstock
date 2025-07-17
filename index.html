@@ -41,31 +41,11 @@
             </nav>
         </header>
         <main id="page-container" class="max-w-5xl mx-auto">
-            <!-- Dashboard Page -->
-            <div id="page-dashboard" class="page active">
-                <header class="mb-6"><h2 class="text-2xl font-bold text-gray-800">ภาพรวมร้านค้า</h2></header>
-                <div id="kpi-cards-container" class="grid grid-cols-2 md:grid-cols-4 gap-4"></div>
-            </div>
-            <!-- Sell Page -->
-            <div id="page-sell" class="page">
-                <header class="mb-6"><h2 class="text-2xl font-bold text-gray-800">สร้างรายการขายใหม่</h2></header>
-                <div class="content-card p-6"><form id="sale-form" class="space-y-4"><div><label class="text-sm font-medium">ลูกค้า</label><div class="flex space-x-2 mt-1"><select id="sale-customer-select" class="w-full p-2 bg-gray-100 border rounded-md"></select><button type="button" onclick="openModal('customerModal')" class="bg-gray-200 px-3 rounded-md text-sm">เพิ่มใหม่</button></div></div><div><label class="text-sm font-medium">รายการสินค้า</label><div id="sale-items-container" class="space-y-2 mt-1"></div><button type="button" id="add-sale-item-btn" class="text-blue-600 text-sm font-semibold mt-2">+ เพิ่มรายการสินค้า</button></div><div class="grid grid-cols-2 gap-4 border-t pt-4"><div><label class="text-sm font-medium">เครดิต (วัน)</label><input type="number" id="sale-credit-days" value="30" class="w-full mt-1 p-2 bg-gray-100 border rounded-md"></div><div><label class="text-sm font-medium">วันที่ขาย</label><input type="date" id="sale-date" class="w-full mt-1 p-2 bg-gray-100 border rounded-md"></div></div><div class="text-right border-t pt-4"><p class="text-gray-500">ยอดรวมทั้งสิ้น</p><p id="sale-total-amount" class="text-3xl font-bold text-blue-600">฿0.00</p></div><button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 px-4 rounded-lg mt-4">บันทึกการขาย</button></form></div>
-            </div>
-            <!-- Products Page -->
-            <div id="page-products" class="page">
-                <header class="mb-6 flex justify-between items-center"><h2 class="text-2xl font-bold text-gray-800">จัดการคลังสินค้า</h2><button onclick="openModal('productModal')" class="bg-green-600 text-white font-semibold py-2 px-4 rounded-lg flex items-center"><svg class="w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>เพิ่มสินค้าใหม่</button></header>
-                <div class="content-card"><div class="overflow-x-auto"><table class="w-full text-sm text-left"><thead class="text-xs text-gray-500 uppercase border-b"><tr class="font-semibold"><th class="p-3">สินค้า</th><th class="p-3 text-right">ราคา</th><th class="p-3 text-right">สต็อก</th><th class="p-3 text-center">จัดการ</th></tr></thead><tbody id="products-table-body" class="divide-y"></tbody></table></div></div>
-            </div>
-            <!-- Customers Page -->
-            <div id="page-customers" class="page">
-                <header class="mb-6 flex justify-between items-center"><h2 class="text-2xl font-bold text-gray-800">จัดการข้อมูลลูกค้า</h2><button onclick="openModal('customerModal')" class="bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg">+ เพิ่มลูกค้าใหม่</button></header>
-                <div class="content-card"><ul id="customers-list" class="divide-y"></ul></div>
-            </div>
-            <!-- Reports Page -->
-            <div id="page-reports" class="page">
-                <header class="mb-6"><h2 class="text-2xl font-bold text-gray-800">รายงาน</h2></header>
-                <p class="text-gray-600">หน้ารายงานจะถูกพัฒนาในลำดับถัดไป</p>
-            </div>
+            <div id="page-dashboard" class="page active"><header class="mb-6"><h2 class="text-2xl font-bold text-gray-800">ภาพรวมร้านค้า</h2></header><div id="kpi-cards-container" class="grid grid-cols-2 md:grid-cols-4 gap-4"></div></div>
+            <div id="page-sell" class="page"><header class="mb-6"><h2 class="text-2xl font-bold text-gray-800">สร้างรายการขายใหม่</h2></header><div class="content-card p-6"><form id="sale-form" class="space-y-4"><div><label class="text-sm font-medium">ลูกค้า</label><div class="flex space-x-2 mt-1"><select id="sale-customer-select" class="w-full p-2 bg-gray-100 border rounded-md"></select><button type="button" onclick="openModal('customerModal')" class="bg-gray-200 px-3 rounded-md text-sm">เพิ่มใหม่</button></div></div><div><label class="text-sm font-medium">รายการสินค้า</label><div id="sale-items-container" class="space-y-2 mt-1"></div><button type="button" id="add-sale-item-btn" class="text-blue-600 text-sm font-semibold mt-2">+ เพิ่มรายการสินค้า</button></div><div class="text-right border-t pt-4"><p class="text-gray-500">ยอดรวมทั้งสิ้น</p><p id="sale-total-amount" class="text-3xl font-bold text-blue-600">฿0.00</p></div><button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 px-4 rounded-lg mt-4">บันทึกการขาย</button></form></div></div>
+            <div id="page-products" class="page"><header class="mb-6 flex justify-between items-center"><h2 class="text-2xl font-bold text-gray-800">จัดการคลังสินค้า</h2><button onclick="openModal('productModal')" class="bg-green-600 text-white font-semibold py-2 px-4 rounded-lg flex items-center"><svg class="w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>เพิ่มสินค้าใหม่</button></header><div class="content-card"><div class="overflow-x-auto"><table class="w-full text-sm text-left"><thead class="text-xs text-gray-500 uppercase border-b"><tr class="font-semibold"><th class="p-3">สินค้า</th><th class="p-3 text-right">ราคา</th><th class="p-3 text-right">สต็อก</th><th class="p-3 text-center">จัดการ</th></tr></thead><tbody id="products-table-body" class="divide-y"></tbody></table></div></div></div>
+            <div id="page-customers" class="page"><header class="mb-6 flex justify-between items-center"><h2 class="text-2xl font-bold text-gray-800">จัดการข้อมูลลูกค้า</h2><button onclick="openModal('customerModal')" class="bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg">+ เพิ่มลูกค้าใหม่</button></header><div class="content-card"><ul id="customers-list" class="divide-y"></ul></div></div>
+            <div id="page-reports" class="page"><header class="mb-6"><h2 class="text-2xl font-bold text-gray-800">รายงาน</h2></header><p class="text-gray-600">หน้ารายงานจะถูกพัฒนาในลำดับถัดไป</p></div>
         </main>
     </div>
 
@@ -101,13 +81,11 @@
                 itemsContainer: document.getElementById('sale-items-container'),
                 addItemBtn: document.getElementById('add-sale-item-btn'),
                 totalAmount: document.getElementById('sale-total-amount'),
-                dateInput: document.getElementById('sale-date'),
             }
         };
 
         // --- INITIALIZATION ---
         document.addEventListener('DOMContentLoaded', () => {
-            dom.saleForm.dateInput.valueAsDate = new Date();
             dom.saleForm.addItemBtn.addEventListener('click', () => addSaleItem(false));
             dom.saleForm.form.addEventListener('submit', handleSaveSale);
             fetchData();
@@ -129,8 +107,6 @@
                 });
                 const result = await response.json();
                 if (result.status !== 'success') throw new Error(result.message);
-                
-                await fetchData(); // Refresh all data after a successful action
                 return { success: true, data: result.data };
             } catch (error) {
                 console.error('API Error:', error);
@@ -147,17 +123,19 @@
                 if (!APPS_SCRIPT_URL || APPS_SCRIPT_URL.includes('YOUR_APPS_SCRIPT')) {
                     throw new Error('คุณยังไม่ได้ตั้งค่า APPS_SCRIPT_URL');
                 }
-                const response = await postAction('getDashboardData', {});
+                const response = await fetch(APPS_SCRIPT_URL, {
+                    method: 'POST',
+                    body: JSON.stringify({ action: 'getDashboardData' }),
+                    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+                });
+                if (!response.ok) throw new Error(`Network Error: ${response.statusText}`);
+                const result = await response.json();
+                if (result.status !== 'success') throw new Error(result.message || 'เกิดข้อผิดพลาดจากฝั่งเซิร์ฟเวอร์');
 
-                if (!response.success) {
-                    throw new Error(response.message || 'เกิดข้อผิดพลาดในการดึงข้อมูล');
-                }
+                state.products = result.data.products || [];
+                state.customers = result.data.customers || [];
+                state.sales = result.data.sales || [];
 
-                state.products = response.data.products || [];
-                state.customers = response.data.customers || [];
-                state.sales = response.data.sales || [];
-
-                // Calculate customer due amounts on the frontend
                 state.customers.forEach(customer => {
                     const customerSales = state.sales.filter(sale => sale.CustomerID == customer.CustomerID);
                     customer.due = customerSales.reduce((sum, sale) => sum + (sale.TotalAmount || 0), 0);
@@ -187,44 +165,15 @@
             const totalStockValue = state.products.reduce((s, p) => s + (p.Price * p.Stock), 0);
             const totalDue = state.customers.reduce((s, c) => s + (c.due || 0), 0);
             const lowStockCount = state.products.filter(p => p.Stock < 10).length;
-            dom.kpiContainer.innerHTML = `
-                <div class="content-card p-4"><p class="text-sm text-gray-500">มูลค่าสต็อก</p><p class="text-2xl font-bold text-blue-600">฿${totalStockValue.toLocaleString()}</p></div>
-                <div class="content-card p-4"><p class="text-sm text-gray-500">ยอดค้างชำระรวม</p><p class="text-2xl font-bold text-red-600">฿${totalDue.toLocaleString()}</p></div>
-                <div class="content-card p-4"><p class="text-sm text-gray-500">จำนวนลูกค้า</p><p class="text-2xl font-bold text-gray-800">${state.customers.length}</p></div>
-                <div class="content-card p-4"><p class="text-sm text-gray-500">สินค้าใกล้หมด</p><p class="text-2xl font-bold ${lowStockCount > 0 ? 'text-red-600' : 'text-green-600'}">${lowStockCount}</p></div>`;
+            dom.kpiContainer.innerHTML = `<div class="content-card p-4"><p class="text-sm text-gray-500">มูลค่าสต็อก</p><p class="text-2xl font-bold text-blue-600">฿${totalStockValue.toLocaleString()}</p></div><div class="content-card p-4"><p class="text-sm text-gray-500">ยอดค้างชำระรวม</p><p class="text-2xl font-bold text-red-600">฿${totalDue.toLocaleString()}</p></div><div class="content-card p-4"><p class="text-sm text-gray-500">จำนวนลูกค้า</p><p class="text-2xl font-bold text-gray-800">${state.customers.length}</p></div><div class="content-card p-4"><p class="text-sm text-gray-500">สินค้าใกล้หมด</p><p class="text-2xl font-bold ${lowStockCount > 0 ? 'text-red-600' : 'text-green-600'}">${lowStockCount}</p></div>`;
         }
 
         function renderProductsTable() {
-            if (!dom.productsTableBody) return;
-            dom.productsTableBody.innerHTML = state.products.map(p => `
-                <tr class="hover:bg-slate-50">
-                    <td class="p-3"><div class="font-medium">${p.Name || 'N/A'}</div><div class="text-xs text-gray-400">ID: ${p.ProductID}</div></td>
-                    <td class="p-3 text-right">${Number(p.Price || 0).toFixed(2)}</td>
-                    <td class="p-3 text-right font-bold ${p.Stock < 10 ? 'text-red-500' : 'text-green-600'}">${p.Stock}</td>
-                    <td class="p-3 text-center space-x-2">
-                        <button onclick="openModal('productModal', '${p.ProductID}')" class="text-blue-600 hover:underline">แก้ไข</button>
-                        <button onclick="handleDeleteProduct('${p.ProductID}', '${p.Name}')" class="text-red-500 hover:underline">ลบ</button>
-                    </td>
-                </tr>`).join('');
+            dom.productsTableBody.innerHTML = state.products.map(p => `<tr class="hover:bg-slate-50"><td class="p-3"><div class="font-medium">${p.Name || 'N/A'}</div><div class="text-xs text-gray-400">ID: ${p.ProductID}</div></td><td class="p-3 text-right">${Number(p.Price || 0).toFixed(2)}</td><td class="p-3 text-right font-bold ${p.Stock < 10 ? 'text-red-500' : 'text-green-600'}">${p.Stock}</td><td class="p-3 text-center space-x-2"><button onclick="openModal('productModal', '${p.ProductID}')" class="text-blue-600 hover:underline">แก้ไข</button><button onclick="handleDeleteProduct('${p.ProductID}', '${p.Name}')" class="text-red-500 hover:underline">ลบ</button></td></tr>`).join('');
         }
 
         function renderCustomersList() {
-            if (!dom.customersList) return;
-            dom.customersList.innerHTML = state.customers.map(c => `
-                <li class="p-4 flex justify-between items-center hover:bg-slate-50 cursor-pointer" onclick="showCustomerDetail('${c.CustomerID}')">
-                    <div>
-                        <p class="font-semibold text-blue-700">${c.Name}</p>
-                        <p class="text-sm text-gray-500">${c.Phone}</p>
-                    </div>
-                    <div class="flex items-center space-x-4">
-                        <div>
-                            <p class="text-sm ${c.due > 0 ? 'text-red-500' : 'text-green-600'}">${c.due > 0 ? 'ค้างชำระ' : 'ไม่มีหนี้ค้าง'}</p>
-                            <p class="font-semibold text-right">${c.due > 0 ? '฿' + c.due.toLocaleString() : '-'}</p>
-                        </div>
-                        <button onclick="event.stopPropagation(); openModal('customerModal', '${c.CustomerID}')" class="text-gray-400 hover:text-blue-600 p-1 text-xs">แก้ไข</button>
-                        <button onclick="event.stopPropagation(); handleDeleteCustomer('${c.CustomerID}', '${c.Name}')" class="text-gray-400 hover:text-red-600 p-1">✕</button>
-                    </div>
-                </li>`).join('');
+            dom.customersList.innerHTML = state.customers.map(c => `<li class="p-4 flex justify-between items-center hover:bg-slate-50 cursor-pointer" onclick="showCustomerDetail('${c.CustomerID}')"><div><p class="font-semibold text-blue-700">${c.Name}</p><p class="text-sm text-gray-500">${c.Phone}</p></div><div class="flex items-center space-x-4"><div><p class="text-sm ${c.due > 0 ? 'text-red-500' : 'text-green-600'}">${c.due > 0 ? 'ค้างชำระ' : 'ไม่มีหนี้ค้าง'}</p><p class="font-semibold text-right">${c.due > 0 ? '฿' + c.due.toLocaleString() : '-'}</p></div><button onclick="event.stopPropagation(); openModal('customerModal', '${c.CustomerID}')" class="text-gray-400 hover:text-blue-600 p-1 text-xs">แก้ไข</button><button onclick="event.stopPropagation(); handleDeleteCustomer('${c.CustomerID}', '${c.Name}')" class="text-gray-400 hover:text-red-600 p-1">✕</button></div></li>`).join('');
         }
 
         function populateCustomerSelect() {
@@ -241,6 +190,7 @@
             if (result.success) {
                 showToast('บันทึกข้อมูลสินค้าสำเร็จ!');
                 closeModal();
+                fetchData();
             }
         }
 
@@ -253,6 +203,7 @@
             if (result.success) {
                 showToast('บันทึกข้อมูลลูกค้าสำเร็จ!');
                 closeModal();
+                fetchData();
             }
         }
         
@@ -281,10 +232,10 @@
                 if (result.success) {
                     showToast('บันทึกการขายสำเร็จ!');
                     dom.saleForm.form.reset();
-                    dom.saleForm.dateInput.valueAsDate = new Date();
                     dom.saleForm.itemsContainer.innerHTML = '';
                     addSaleItem(true);
                     updateSaleTotal();
+                    fetchData();
                 }
             });
         }
@@ -292,14 +243,20 @@
         async function handleDeleteProduct(id, name) {
             openConfirmationModal(`คุณแน่ใจหรือไม่ว่าต้องการลบ "${name}"?`, async () => {
                 const result = await postAction('deleteProduct', { id });
-                if (result.success) showToast('ลบสินค้าสำเร็จแล้ว');
+                if (result.success) {
+                    showToast('ลบสินค้าสำเร็จแล้ว');
+                    fetchData();
+                }
             });
         }
 
         async function handleDeleteCustomer(id, name) {
             openConfirmationModal(`คุณแน่ใจหรือไม่ว่าต้องการลบลูกค้า "${name}"?`, async () => {
                 const result = await postAction('deleteCustomer', { id });
-                if (result.success) showToast('ลบลูกค้าสำเร็จแล้ว');
+                if (result.success) {
+                    showToast('ลบลูกค้าสำเร็จแล้ว');
+                    fetchData();
+                }
             });
         }
         
