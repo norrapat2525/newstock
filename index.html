@@ -52,7 +52,7 @@
     <div id="toast-container" class="fixed bottom-5 right-5 z-50 w-full max-w-xs"></div>
     <script>
         // ---> ใส่ WEB APP URL ของคุณตรงนี้ <---
-        const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbybctYDUM9yS9pq7cu_z9YwMXtoJ1UB8e28XuuuNw/dev';
+        const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzDzJqTI3QQDaIxmdt2K3-1JHScRALo7ulXuvfSPtQ57XxFoJq-vlhjtOLiUlMeL5k/exec';
 
         const state = { products: [], customers: [], sales: [] };
         const dom = { mainApp: document.getElementById('main-app'), loadingOverlay: null, kpiContainer: document.getElementById('kpi-cards-container'), productsTableBody: document.getElementById('products-table-body'), customersList: document.getElementById('customers-list'), modalContainer: document.getElementById('modal-container'), toastContainer: document.getElementById('toast-container'), customerDetailModal: document.getElementById('customer-detail-modal'), saleForm: { form: document.getElementById('sale-form'), customerSelect: document.getElementById('sale-customer-select'), itemsContainer: document.getElementById('sale-items-container'), addItemBtn: document.getElementById('add-sale-item-btn'), totalAmount: document.getElementById('sale-total-amount'), dateInput: document.getElementById('sale-date'), creditDays: document.getElementById('sale-credit-days') } };
